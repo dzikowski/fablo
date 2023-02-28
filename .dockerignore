@@ -1,8 +1,8 @@
 .idea
 e2e
+e2e-network
 fablo-target
 node_modules
-Jenkinsfile
 samples/chaincodes/chaincode-java-simple
 samples/chaincodes/chaincode-kv-node/node_modules
 samples/chaincodes/chaincode-kv-node/**/*.spec.js

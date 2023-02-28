@@ -11,6 +11,8 @@ Fablo supports:
 * REST API client for CA and chaincodes ([Fablo REST](https://github.com/softwaremill/fablo-rest))
 * [Blockchain Explorer](https://github.com/hyperledger/blockchain-explorer) which can be enabled for each organization
 
+## Experimental: Kubernetes operators support
+
 ## See it in action
 
 [![How to use](https://img.youtube.com/vi/JqPNozCtHkQ/0.jpg)](https://www.youtube.com/watch?v=JqPNozCtHkQ)
