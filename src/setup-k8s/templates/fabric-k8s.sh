@@ -19,15 +19,14 @@ networkUp() {
   printHeadline "Checking dependencies..." "U1F984"
   verifyKubernetesConnectivity
   printHeadline "Starting Network..." "U1F984"
-  deployPeer
-  deployOrderer
+  deployNodes
   installChannels
   installChaincodes
   printHeadline "Done! Enjoy your fresh network" "U1F984"
 }
 
 networkDown() {
-  printHeadline "Destroying network" "U1F913"
+  printHeadline "Destroying network" "U1F916"
   destroyNetwork
 }
 

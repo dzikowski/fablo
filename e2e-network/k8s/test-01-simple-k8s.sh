@@ -39,6 +39,7 @@ trap networkDown EXIT
 trap 'networkDown ; echo "Test failed" ; exit 1' ERR SIGINT
 
 # start the network
+#networkDown
 networkUp
 
 peer0="$(kubectl get pods | grep peer0 | tr -s ' ' | cut -d ':' -f 1 | cut -d ' ' -f 1 | head -n 1) peer"
