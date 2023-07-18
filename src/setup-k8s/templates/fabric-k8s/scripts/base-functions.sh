@@ -214,7 +214,7 @@ deployNodes() {
     <% }) -%>
   <% }) -%>
 
-  printItalics "Deploying Peers" "U2699"
+  printItalics "Deploying peers" "U2699"
   <% orgs.forEach((org) => { -%>
     <% if (org.peers.length) { -%>
       registerPeerUser "<%= org.name.toLowerCase() %>-<%= org.ca.prefix %>" "$<%= org.ca.caAdminNameVar %>" "$<%= org.ca.caAdminPassVar %>" "<%= org.mspName %>"

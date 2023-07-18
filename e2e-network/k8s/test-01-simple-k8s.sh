@@ -42,8 +42,8 @@ trap 'networkDown ; echo "Test failed" ; exit 1' ERR SIGINT
 #networkDown
 networkUp
 
-peer0=$(kubectl get pods | grep peer0 | tr -s ' ' | cut -d ':' -f 1 | cut -d ' ' -f 1 | head -n 1)
-peer1=$(kubectl get pods | grep peer1 | tr -s ' ' | cut -d ':' -f 1 | cut -d ' ' -f 1 | head -n 1)
+peer0="$(kubectl get pods | grep peer0 | tr -s ' ' | cut -d ':' -f 1 | cut -d ' ' -f 1 | head -n 1) peer"
+peer1="$(kubectl get pods | grep peer1 | tr -s ' ' | cut -d ':' -f 1 | cut -d ' ' -f 1 | head -n 1) peer"
 ca=$(kubectl get pods | grep org1-ca | tr -s ' ' | cut -d ':' -f 1 | cut -d ' ' -f 1)
 orderer=$(kubectl get pods | grep orderer-node | tr -s ' ' | cut -d ':' -f 1 | cut -d ' ' -f 1)
 
@@ -74,6 +74,5 @@ expectInvoke "admin" "peer1.default" "my-channel1" "chaincode1" \
   "get" "[\"name\"]" "" '{"error":"NOT_FOUND"}'
 
 # Put some data again
-
 expectInvoke "admin" "peer1.default" "my-channel1" "chaincode1" \
   "put" "[\"name\"]" "James Bond" "{\"success\":\"OK\"}"
