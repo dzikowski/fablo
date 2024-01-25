@@ -97,6 +97,7 @@ deployOrderer() {
     --ca-name="$CA_NAME" \
     --mspid="$MSPID"
 
+
   kubectl wait --timeout=180s --for=condition=Running fabricorderernodes.hlf.kungfusoftware.es --all
 }
 
